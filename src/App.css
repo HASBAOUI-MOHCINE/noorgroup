@@ -1,0 +1,54 @@
+/* Responsive helper styles for Noor Group app */
+
+.glass-panel, .section-panel {
+		color: #11110d;
+}
+
+html.dark .glass-panel, html.dark .section-panel {
+		color: #fff;
+}
+
+/* Reduce default section padding slightly for small viewports */
+.section-panel {
+		padding: clamp(1.25rem, 4vw, 3.25rem);
+}
+
+/* Responsive tweaks for smaller screens */
+@media (max-width: 768px) {
+	.section-panel {
+		border-radius: 18px;
+		padding: 1rem;
+	}
+
+	.glass-panel {
+		border-radius: 16px;
+		padding: 0.75rem;
+	}
+
+	/* Reduce large headings on very small screens */
+	h1 {
+		font-size: 1.6rem;
+		line-height: 1.15;
+	}
+
+	/* Make the featured card area wrap naturally */
+	.glass-panel .w-full.h-48 {
+		height: auto;
+		padding: 1rem;
+	}
+
+	/* Ensure buttons can wrap instead of overflowing */
+	.inline-flex.items-center.gap-2.rounded-full {
+		flex-wrap: wrap;
+	}
+}
+
+/* small mobile menu helpers (used by Navbar) */
+.mobile-menu {
+	transition: max-height 220ms ease, opacity 180ms ease;
+	overflow: hidden;
+}
+
+.mobile-menu.closed { max-height: 0; opacity: 0; }
+.mobile-menu.open { max-height: 420px; opacity: 1; }
+

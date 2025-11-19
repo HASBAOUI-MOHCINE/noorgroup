@@ -11,7 +11,7 @@ export default function Footer({ t = {} }) {
 
         <div className="flex items-center gap-4 text-sm">
           <a href="https://instagram.com/yourprofile" target="_blank" rel="noopener noreferrer" className="text-[#11110d] dark:text-white hover:text-[#bd915a]">Instagram</a>
-          <a href="https://twitter.com/yourprofile" target="_blank" rel="noopener noreferrer" className="text-[#11110d] dark:text-white hover:text-[#bd915a]">Twitter</a>
+          <a href="https://facebook.com/yourprofile" target="_blank" rel="noopener noreferrer" className="text-[#11110d] dark:text-white hover:text-[#bd915a]">Facebook</a>
           <a href="https://linkedin.com/yourprofile" target="_blank" rel="noopener noreferrer" className="text-[#11110d] dark:text-white hover:text-[#bd915a]">LinkedIn</a>
         </div>
 
