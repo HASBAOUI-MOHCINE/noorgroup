@@ -1,0 +1,99 @@
+.glass-panel, .section-panel {
+	color: #11110d;
+}
+
+html.dark .glass-panel, html.dark .section-panel {
+	color: #fff;
+}
+
+/* Noor Group brand tokens (used by runtime Tailwind via CDN and as CSS variables) */
+:root {
+	--noor-900: #11110d;
+	--noor-800: #342d24;
+	--noor-700: #7c6c5b;
+	--noor-600: #7d5a34;
+	--noor-500: #bd915a;
+	--noor-gold: #bd915a;
+}
+
+/* App-level defaults (Tailwind utilities are loaded at runtime via the CDN) */
+html, body, #root { height: 100%; }
+.app-root { min-height: 100vh }
+
+/* FORCE black text in light mode, white text in dark mode */
+html:not(.dark) * {
+	color: #11110d !important;
+}
+
+html.dark * {
+	color: #ffffff !important;
+}
+
+/* FORCE white backgrounds in light mode, black in dark mode */
+html:not(.dark) .glass-panel,
+html:not(.dark) .section-panel {
+	background-color: #ffffff !important;
+}
+
+html.dark .glass-panel,
+html.dark .section-panel {
+	background-color: #11110d !important;
+}
+
+/* Theme-aware background/text using the html.dark class (Tailwind configured with darkMode:'class') */
+html.dark body {
+	margin: 0;
+	font-family: 'Plus Jakarta Sans', Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+	background-color: #11110d;
+	color: #ffffff;
+}
+
+html:not(.dark) body {
+	margin: 0;
+	font-family: 'Plus Jakarta Sans', Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+	background-color: #ffffff;
+	color: #11110d;
+}
+
+html[lang='ar'] body {
+	font-family: 'Cairo', 'Plus Jakarta Sans', Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+.app-root { min-height: 100vh }
+
+/* gold utility */
+.text-gold { color: var(--noor-gold); }
+.bg-gold { background: linear-gradient(90deg, var(--noor-600), var(--noor-500)); }
+.bg-noor-gradient { background-image: linear-gradient(135deg, var(--noor-900), var(--noor-800)); }
+
+
+.glass-panel {
+	background: #ffffff;
+	border: 1px solid rgba(17, 17, 13, 0.10);
+	border-radius: 24px;
+	box-shadow: 0 18px 45px rgba(17, 17, 13, 0.08);
+	color: #11110d;
+}
+
+html.dark .glass-panel {
+	background: #11110d;
+	border-color: rgba(189, 145, 90, 0.3);
+	box-shadow: 0 25px 50px rgba(0, 0, 0, 0.55);
+	color: #ffffff;
+}
+
+.section-panel {
+	background: #ffffff;
+	border: 1px solid rgba(17, 17, 13, 0.12);
+	border-radius: 32px;
+	padding: clamp(2rem, 4vw, 3.25rem);
+	box-shadow: 0 30px 60px rgba(17, 17, 13, 0.08);
+	color: #11110d;
+}
+
+html.dark .section-panel {
+	background: #11110d;
+	border-color: rgba(189, 145, 90, 0.3);
+	box-shadow: 0 35px 60px rgba(0, 0, 0, 0.65);
+	color: #ffffff;
+}
+

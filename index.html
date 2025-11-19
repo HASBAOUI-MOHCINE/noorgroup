@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <!-- Font stack: Plus Jakarta Sans for latin, Inter fallback, Cairo for Arabic -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Inter:wght@300;400;600;700;800&family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>noor-group</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <!-- Tailwind via CDN (no PostCSS/build step). Theme colors are injected here. -->
+    <script>
+      window.tailwind = {
+        config: {
+          darkMode: 'class',
+          theme: {
+            extend: {
+              colors: {
+                noor: {
+                  900: '#11110d',
+                  800: '#342d24',
+                  700: '#7c6c5b',
+                  600: '#7d5a34',
+                  500: '#bd915a',
+                }
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
